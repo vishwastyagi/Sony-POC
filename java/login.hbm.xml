@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="bean.LoginBean" table="login">
+        <id name="id" column="id">
+            <generator  class="increment"/>
+        </id>
+        <property name="username" column="username" />
+        <property name="password" column="password" not-null="true"/>
+        <property name="role" column="role" not-null="true"/>
+        
+    </class>
+    
+    
+    <class name="bean.RegisterBean" table="registration">
+        <id name="username" column="username">
+            <generator class="assigned"/>
+        </id>
+        <property name="name" column="name" not-null="true"/>
+        <property name="password" column="password" not-null="true"/>
+        <property name="role" column="role" not-null="true"/>
+        <property name="phoneno" column="phoneno" not-null="true"/>
+        
+    </class>
+  
+ 
+
+</hibernate-mapping>

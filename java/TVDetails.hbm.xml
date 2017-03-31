@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="bean.TVDetailsBean" table="TVDETAILS">
+        <id name="modelname" column="modelname">
+            <generator  class="assigned"/>
+        </id>
+        <property name="screentype" column="screentype" not-null="true"/>
+        <property name="threedsupport" column="threedsupport" not-null="true"/>
+        <property name="tvsize" column="tvsize" not-null="true"/>
+        <property name="highdefination" column="highdefination" not-null="true"/>
+        <property name="price" column="price" not-null="true"/>
+        <property name="imagelocation" column="imagelocation" not-null="true"/>
+    </class>
+  
+
+</hibernate-mapping>
